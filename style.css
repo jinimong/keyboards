@@ -1,0 +1,85 @@
+:root {
+  --normal-key-width: 3rem;
+  --normal-key-height: 3rem;
+  --common-padding: 0.75rem;
+  --key-font-size: 0.5rem;
+  --key-base-color: #e4dfd7;
+  --key-dark-color: #787878;
+}
+
+.keyboard {
+  padding: 1rem;
+  background-color: var(--key-base-color);
+  width: calc(var(--normal-key-width) * 16.5);
+  margin: 0 auto;
+}
+
+.line {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row-keys {
+  display: flex;
+  flex-direction: row;
+}
+
+.key {
+  border: 0.1rem solid black;
+  border-radius: 10%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: var(--key-font-size);
+  width: var(--normal-key-width);
+  height: var(--normal-key-height);
+  background-color: var(--key-base-color);
+}
+
+.dark {
+  background-color: var(--key-dark-color);
+}
+
+#key-insert,
+#key-delete {
+  margin-left: calc(var(--normal-key-width) / 2);
+}
+
+/* 8U */
+#key-spacebar {
+  width: calc(var(--normal-key-width) * 6);
+}
+
+/* 2.25U */
+#key-enter,
+#key-lshift,
+#key-rshift {
+  width: calc(var(--normal-key-width) * 2.25);
+}
+
+/* 2U */
+#key-backspace {
+  width: calc(var(--normal-key-width) * 2);
+}
+
+/* 1.75U */
+#key-capslock {
+  width: calc(var(--normal-key-width) * 1.75);
+}
+
+/* 1.5U */
+#key-tab,
+#key-backslash {
+  width: calc(var(--normal-key-width) * 1.5);
+}
+
+/* 1.25U */
+#key-lctrl,
+#key-window,
+#key-lalt,
+#key-ralt,
+#key-rctrl,
+#key-function {
+  width: calc(var(--normal-key-width) * 1.25);
+}
