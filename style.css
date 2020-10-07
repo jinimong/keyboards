@@ -7,6 +7,10 @@
   --key-dark-color: #787878;
 }
 
+.title {
+  text-align: center;
+}
+
 .keyboard {
   padding: 1rem;
   background-color: var(--key-base-color);
@@ -37,49 +41,53 @@
   background-color: var(--key-base-color);
 }
 
+.key.active {
+  background-color: pink;
+}
+
 .dark {
   background-color: var(--key-dark-color);
 }
 
-#key-insert,
-#key-delete {
+#Insert,
+#Delete {
   margin-left: calc(var(--normal-key-width) / 2);
 }
 
 /* 8U */
-#key-spacebar {
+#Space {
   width: calc(var(--normal-key-width) * 6);
 }
 
 /* 2.25U */
-#key-enter,
-#key-lshift,
-#key-rshift {
+#Enter,
+#ShiftLeft,
+#ShiftRight {
   width: calc(var(--normal-key-width) * 2.25);
 }
 
 /* 2U */
-#key-backspace {
+#Backspace {
   width: calc(var(--normal-key-width) * 2);
 }
 
 /* 1.75U */
-#key-capslock {
+#CapsLock {
   width: calc(var(--normal-key-width) * 1.75);
 }
 
 /* 1.5U */
-#key-tab,
-#key-backslash {
+#Tab,
+#Backslash {
   width: calc(var(--normal-key-width) * 1.5);
 }
 
 /* 1.25U */
-#key-lctrl,
-#key-window,
-#key-lalt,
-#key-ralt,
-#key-rctrl,
-#key-function {
+#ControlLeft,
+#MetaLeft,
+#AltLeft,
+#AltRight,
+#ControlRight,
+#Function {
   width: calc(var(--normal-key-width) * 1.25);
 }
