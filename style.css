@@ -2,20 +2,61 @@
   --normal-key-width: 3rem;
   --normal-key-height: 3rem;
   --common-padding: 0.75rem;
+  --sentence-font-size: 1.25rem;
   --key-font-size: 0.5rem;
   --key-base-color: #e4dfd7;
   --key-dark-color: #787878;
 }
 
-.title {
-  text-align: center;
+body {
+  padding: var(--common-padding);
+  height: 80vh;
+  margin: 100px;
+}
+
+h3 {
+  margin-bottom: 0.25rem;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+}
+
+.typing {
+  width: 50rem;
+  margin: auto;
+}
+
+#sentence {
+  width: 100%;
+  padding: var(--common-padding);
+  border: 2px solid var(--key-dark-color);
+  border-radius: 10px;
+  font-size: var(--sentence-font-size);
+}
+
+#input {
+  width: 100%;
+  padding: var(--common-padding);
+  margin: auto;
+  border: 1px solid var(--key-dark-color);
+  border-radius: 10px;
+  font-size: var(--sentence-font-size);
 }
 
 .keyboard {
-  padding: 1rem;
-  background-color: var(--key-base-color);
   width: calc(var(--normal-key-width) * 16.5);
   margin: 0 auto;
+}
+
+.lines {
+  width: calc(var(--normal-key-width) * 16.5);
+  margin: 0 auto;
+  background-color: var(--key-base-color);
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .line {
