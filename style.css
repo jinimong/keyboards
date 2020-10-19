@@ -6,22 +6,78 @@
   --key-font-size: 0.5rem;
   --key-base-color: #e4dfd7;
   --key-dark-color: #787878;
+  --background-dark: rgba(0, 0, 0, 0.9);
 }
 
 body {
-  padding: var(--common-padding);
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 0 var(--common-padding);
   height: 80vh;
-  margin: 100px;
+  margin-top: 4rem;
 }
 
-h3 {
-  margin-bottom: 0.25rem;
+.title {
+  margin: 1rem 0 0.5rem 0;
+  font-size: calc(var(--sentence-font-size) * 1.5);
 }
 
 textarea {
   font-family: inherit;
   font-size: inherit;
   resize: none;
+}
+
+.modal {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__overlay {
+  background-color: var(--background-dark);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.modal__content {
+  /* background-color: var(--background-dark); */
+  color: var(--key-base-color);
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__content .title {
+  font-size: calc(var(--sentence-font-size) * 2.5);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .typing {
@@ -44,6 +100,7 @@ textarea {
   border: 1px solid var(--key-dark-color);
   border-radius: 10px;
   font-size: var(--sentence-font-size);
+  overflow: hidden;
 }
 
 .keyboard {
@@ -72,7 +129,7 @@ textarea {
 
 .key {
   border: 0.1rem solid black;
-  border-radius: 10%;
+  border-radius: 5px;
   box-sizing: border-box;
   padding: 0.5rem;
   text-align: center;

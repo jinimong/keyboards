@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keyboards</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
     <script src="typing.js" defer></script>
     <script src="main.js" defer></script>
   </head>
   <body>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <div class="title">타자 연습 시작</div>
+        <div class="description">Press Enter</div>
+      </div>
+    </div>
     <div class="typing">
-      <h3>문단 타자연습</h3>
+      <div class="title">문단 타자연습</div>
       <div id="sentence"></div>
-      <h3>입력</h3>
-      <textarea name="input" id="input" cols="30" rows="3" autofocus></textarea>
+      <div class="title">입력</div>
+      <textarea name="input" id="input" cols="30" rows="4" autofocus></textarea>
     </div>
     <div class="keyboard">
       <h3 class="title">Leopold FC 660C</h3>
